@@ -9,18 +9,41 @@
 @card-radius: 3px;
 
 @teal: #009688;
+@red: #e53935;
+@indigo: #3f51b5;
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300);
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
+    color: inherit;
+    text-decoration: none;
+}
+
+.floating-button{
+    position: absolute;
+    right: 32px;
+    bottom: 32px;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    border-radius: 100%;
+    font-size: 1.5em;
+    color: #FFF;
+    box-shadow: @card-shadow;
 }
 .text-bold{
     font-weight: 700;
 }
 .text-normal{
     font-weight: 400;
+}
+.text-soft{
+    line-height: 1.6em;
+    color: #9f9f9f;
 }
 .text-light{
     font-weight: 300;
@@ -46,6 +69,18 @@ p, h1{
 }
 .teal{
     background: @teal;
+}
+.text-red{
+    color: @red;
+}
+.red{
+    background: @red;
+}
+.text-indigo{
+    color: @indigo;
+}
+.indigo{
+    background: @indigo;
 }
 body{
     background: @background;
@@ -80,6 +115,7 @@ main{
 .column{
     display: inline-block;
     float: left;
+    position: relative;
 }
 .column.l10{
     width: calc(~"100% - 16px");
@@ -105,6 +141,42 @@ main{
     width: 100%;
     float: none;
 }
+
+div.divider{
+    width: 90%;
+    height: 1px;
+    display: block;
+    margin: 16px auto;
+    background: #e7e7e7;
+}
+
+
+
+ul.icon-list{
+    width: 100%;
+    position: relative;
+    & li{
+        height: 40px;
+        line-height: 40px;
+        padding: 0 0 0 50px;
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        & span{
+            position: absolute;
+            left: 0;
+            width: 30px;
+            height: 30px;
+            line-height: 31px;
+            text-align: center;
+            margin: 5px 0;
+            border-radius: 100%;
+            color: #fff;
+        } 
+    }
+}
+
 
 /* ------ *\
     CUSTOM
