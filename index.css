@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    overflow-x: hidden;
+    max-width: 100% !important;
+}
+
+a {
+    color: inherit;
+}
+
+body {
+    background-color: #222;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    z-index: -9999;
+    border-style: solid;
+    border-width: 500px 200vw 0 0;
+    border-color: #2196f3 transparent transparent transparent;
+    overflow-y: hidden;
+    max-width: 100vw;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    margin-top: -500px;
+    margin-left: -100vw;
+    z-index: -9999;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 500px 200vw;
+    border-color: transparent transparent #333 transparent;
+    overflow-y: hidden;
+    max-width: 100vw;
+}
+
+main {
+    padding: 100px 10%;
+}
+
+#presentation {
+    text-align: center;
+    color: rgb(221, 239, 255);
+    padding-right: 32px;
+}
+
+#presentation h1 {
+    color: #222;
+    font-size: 2em;
+    padding-bottom: 16px;
+}
+
+#presentation h2 {
+    color: #333;
+    font-size: 1em;
+    font-weight: 400;
+    padding-bottom: 16px;
+}
+
+#presentation ul {
+    margin-top: 32px;
+}
+
+#presentation ul li{
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    height: 48px;
+    line-height: 48px;
+    font-size: 0.8em;
+}
+
+
+#presentation ul li i{
+    padding-right: 16px;
+    color: #2196f3;
+}
+
+
+.profile-img {
+    margin: 16px auto 32px auto;
+    background-image: url('perfil.jpg');
+    display: block;
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
+    border-radius: 50%;
+}
+
+div.card {
+    border-radius: 3px;
+    background-color: #eee;
+    padding: 32px;
+    width: 100%;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
+}
+
+div.card h1 {
+    display: inline-block;
+    color: #1E2040;
+    font-size: 1em;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 3px solid #2196f3;
+}
+
+div.experience-item:not(:last-child) {
+    padding-bottom: 32px;
+}
+
+div.interest-item {
+    padding: 8px 16px;
+    margin: 8px;
+    background-color: #2196f3;
+    color: rgb(221, 239, 255);
+    border-radius: 16px;
+    text-transform: uppercase;
+}
+
+@media only screen and (min-width: 48em) {
+    .profile-img {
+        width: 250px;
+        height: 250px;
+    }
+    
+}
+
+@media only screen and (max-width: 48em) {
+    .profile-img {
+        width: 250px;
+        height: 250px;
+    }
+    
+    #presentation {
+        margin-bottom: 64px;
+    }
+}
